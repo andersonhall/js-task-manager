@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background: #6b7a8f;
+	color: #fff;
+}
+
+.wrapper {
+	width: 80%;
+	margin: auto;
+	padding: 2rem 3rem;
+	height: 100vh;
+}
+
+.row {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	grid-gap: 5rem;
+	margin-top: 2rem;
+}
+
+.projects {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 150px);
+	grid-gap: 0.3rem;
+	margin: 1rem 0;
+}
+
+.project-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	border: 2px solid #6b7a8f;
+	height: auto;
+	min-height: 50px;
+	width: 150px;
+	padding: 0.4rem 0.7rem;
+	cursor: pointer;
+	color: rgb(255, 255, 255);
+}
+
+.btn.remove-project {
+	margin: 0.5rem 0;
+	color: rgb(216, 216, 216);
+	background: #333;
+}
+
+.tasks {
+	background: #dcc7aa;
+	color: #333;
+	margin-top: 1rem;
+	padding: 1rem;
+	max-width: 600px;
+}
+
+.tasks ul {
+	list-style: none;
+}
+
+.task {
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	margin: 0.4rem 0;
+	font-weight: 600;
+	cursor: pointer;
+	user-select: none;
+	padding: 0.3rem 5rem 0.3rem 0.3rem;
+}
+
+.task.complete {
+	font-weight: 400;
+	text-decoration: line-through;
+}
+
+.task.priority {
+	background: #d86f29;
+	color: #fff;
+}
+
+/* Icons */
+.task i.fa-star {
+	position: absolute;
+	right: 5rem;
+}
+
+.task.priority i {
+	color: #fff;
+}
+
+.task i.fa-pencil-alt {
+	position: absolute;
+	right: 3rem;
+}
+
+.task i.fa-trash-alt {
+	position: absolute;
+	right: 1rem;
+}
+#task-input,
+#task-desc-input,
+#task-date {
+	border: none;
+	font-size: 1rem;
+	padding: 0.5rem;
+	font-weight: 500;
+	font-family: 'Montserrat', sans-serif;
+	color: #999;
+	margin-top: 1rem;
+	height: 40px;
+}
+
+.fa-star,
+.fa-trash-alt {
+	float: right;
+	color: #333;
+	cursor: pointer;
+}
+
+/* Due Date */
+.due {
+	pointer-events: none;
+	margin-left: 1rem;
+	font-style: italic;
+	font-size: 0.9rem;
+	opacity: 0.7;
+}
+
+/* GLOBAL STYLES */
+.btn {
+	background: #d8a129;
+	color: #333;
+	font-weight: 500;
+	border: none;
+	padding: 0.5rem 0.8rem;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.active {
+	background: #dcc7aa;
+	font-weight: 600;
+	color: #333;
+	border-color: #333;
+}
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+	background-color: #fefefe;
+	margin: 15% auto; /* 15% from the top and centered */
+	padding: 2rem;
+	border: 1px solid #888;
+	width: 500px; /* Could be more or less, depending on screen size */
+	z-index: 10;
+	color: #333;
+}
+
+.modal-content form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#add-project-input {
+	margin: 1rem;
+	font-size: 1.5rem;
+	padding: 0.5rem 0.8rem;
+}
+
+/* The Close Button */
+#add-task-modal-span,
+#add-project-modal-span {
+	color: #666;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+#add-task-modal-span:hover,
+#add-task-modal-span:focus,
+#add-project-modal-span:hover,
+#add-project-modal-span:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+@media (max-width: 768px) {
+	.row {
+		grid-template-columns: 1fr;
+		grid-gap: 2.4rem;
+	}
+
+	.task {
+		padding: 0.3rem 0.3rem 2rem 0.3rem;
+	}
+
+	.task i {
+		bottom: 0.7rem;
+	}
+}

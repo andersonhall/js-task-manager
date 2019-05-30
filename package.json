@@ -1,0 +1,23 @@
+{
+	"name": "oop-todos",
+	"version": "1.0.0",
+	"description": "",
+	"private": true,
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "webpack",
+		"deploy": "gh-pages -d dist"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"gh-pages": "^2.0.1",
+		"webpack": "^4.32.2",
+		"webpack-cli": "^3.3.2"
+	},
+	"dependencies": {
+		"moment": "^2.24.0",
+		"uuid": "^3.3.2"
+	}
+}
