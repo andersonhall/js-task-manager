@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+			integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="css/main.css" />
+		<title>JS Task Manager</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<h1>Task Manager</h1>
+			<div class="row">
+				<div id="column-1">
+					<h2>Projects</h2>
+					<div class="projects"></div>
+					<button class="btn add-project">Add Project</button>
+				</div>
+				<div id="column-2">
+					<h2>Tasks</h2>
+					<form autocomplete="off" class="add-task-form">
+						<input type="text" id="task-input" placeholder="Task name" required />
+						<input type="date" id="task-date" required />
+						<button class="btn add-task">Add Task</button>
+					</form>
+					<div class="tasks"></div>
+					<button class="btn remove-project">Delete Project</button>
+					<button class="btn reset-tasks">Reset All Tasks</button>
+				</div>
+			</div>
+		</div>
+		<!-- Add Project Modal -->
+		<div id="add-project-modal" class="modal">
+			<!-- Modal content -->
+			<div class="modal-content">
+				<span id="add-project-modal-span">&times;</span>
+				<form class="add-project-form">
+					<h2>Add New Project</h2>
+					<input type="text" id="add-project-input" />
+					<button class="btn add-project-submit" type="submit">Add Project</button>
+				</form>
+			</div>
+		</div>
+		<script src="main.js"></script>
+	</body>
+</html>
